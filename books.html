@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books</title>
+  <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #252A34;
+      color: #EAEAEA;
+    }
+
+    .section-2 {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .books {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #08D9D6;
+      border-bottom: 3px solid #FF2E63;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .container-1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .box {
+      background-color: #1E1E26;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .box h3 {
+      color: #A6D1E6;
+      margin-top: 15px;
+    }
+
+    .box p {
+      color: #EAEAEA;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+
+    .box button {
+      background-color: #FF2E63;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .box button:hover {
+      background-color: #FF0303;
+    }
+
+    @media (max-width: 600px) {
+      .books {
+        font-size: 28px;
+      }
+
+      .box p {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section-2">
+    <h2 class="books">Books</h2>
+    <div class="container-1">
+      <div class="box">
+        <img src="images/history.jpg" alt="Historical">
+        <h3>Historical</h3>
+        <p>History allows us to understand the world by reflecting on the events, people, and cultures that shaped it.
+          Dive into our curated selection of influential and engaging history books — from ancient civilizations to
+          modern times.</p>
+        <a href="history.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/geo.jpg" alt="Geo">
+        <h3>Geo</h3>
+        <p> Geography helps us understand the physical world, diverse landscapes, human-environment interaction, and
+          global issues.</p>
+        <a href="geo.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/science.jpg" alt="Science">
+        <h3>Science</h3>
+        <p>Science opens up the mysteries of the universe, empowering us to understand the natural world, innovate, and
+          solve complex problems. Dive into our curated collection of thought-provoking science books that span physics,
+          biology, astronomy, and beyond.</p>
+        <a href="Science.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/comics.jpg" alt="Comics">
+        <h3>Comics</h3>
+        <p>Comics blend storytelling and stunning visuals to captivate readers of all ages. Whether you're into
+          superheroes, manga, fantasy, or slice-of-life adventures, our collection has something exciting for everyone!
+        </p>
+        <a href="Comics.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/story.jpg" alt="Novel">
+        <h3>Novel</h3>
+        <p>Novels open the door to imagination, emotion, and new worlds. Whether you're in the mood for adventure,
+          romance, drama, or reflection, there's a novel that will resonate with you.</p>
+        <a href="Novel.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/medical.jpg" alt="Medical">
+        <h3>Medical</h3>
+        <p>Medical books are essential for students, professionals, and anyone interested in the science of health and
+          the human body. They offer insights into anatomy, diseases, treatments, and the ever-evolving field of
+          healthcare.</p>
+        <a href="Medical.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="img/computer image.jpg" alt="Computer">
+        <h3>Computer</h3>
+        <p>Computer books cover a wide range of topics from programming and software development to computer science
+          theory, cybersecurity, and emerging technologies. Whether you're a beginner or a professional, these books
+          help you understand and master the digital world.</p>
+        <a href="Computer.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/nonfiction.jpg" alt="Non fiction">
+        <h3>Non fiction</h3>
+        <p>Non-fiction books inform, educate, and inspire by presenting real-world knowledge, facts, and true stories.
+          Whether you're interested in science, self-development, biographies, or current events, non-fiction helps
+          expand your understanding of the world around you.</p>
+        <a href="Non fiction.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/fiction.jpg" alt="Fiction">
+        <h3>Fiction</h3>
+        <p>Fiction books transport us to imagined worlds, introduce unforgettable characters, and explore deep human
+          emotions and experiences. From heartwarming tales to epic adventures, fiction opens the door to creativity,
+          empathy, and imagination.</p>
+        <a href="Fiction.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/mystery.jpg" alt="Mystery">
+        <h3>Mystery</h3>
+        <p>Mystery books take you on thrilling journeys filled with secrets, clues, and suspense. Whether it's solving a
+          murder, decoding hidden messages, or uncovering long-lost truths, these stories keep you guessing until the
+          very end.</p>
+        <a href="Mystery.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/biography.jpg" alt="Biography">
+        <h3>Biography</h3>
+        <p>Biography books offer powerful insights into the lives of influential people — their struggles, achievements,
+          and the impact they made on the world. From historical icons to modern-day changemakers, these stories
+          inspire, educate, and empower.</p>
+        <a href="Biography.html"><button>Click Here</button></a>
+      </div>
+      <div class="box">
+        <img src="images/space.jpg" alt="Space">
+        <h3>Space</h3>
+        <p>From black holes to galaxies, and astronauts to alien worlds, space books open up the universe for curious
+          minds. Whether you're a stargazer or a science enthusiast, our space collection is filled with awe-inspiring
+          reads that take you beyond Earth!</p>
+        <a href="Space.html"><button>Click Here</button></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Guides</a></li>
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Event Updates</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join</h4>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Library. All rights reserved. <a href="https://www.library.org/">www.library.org</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

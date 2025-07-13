@@ -1,0 +1,96 @@
+.login-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #252A34;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form .btn:hover {
+  background-color: #FF2E63;
+}
+
+.form-links {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.divider {
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #888;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  width: 40%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}

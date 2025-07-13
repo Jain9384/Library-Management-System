@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nonfiction</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #EAEAEA;
+      color: #252A34;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* History Section */
+    .nonfiction-section {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .nonfiction-section h2 {
+      font-size: 2rem;
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .nonfiction-section p {
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* Book List */
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #fefefe;
+      border-right: 5px solid #FF2E63;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.02);
+    }
+
+    .book h3 {
+      color: #252A34;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .book img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .book p {
+      color: #555;
+    }
+
+    /* Why Read comics Section */
+    .why-read-nonfiction {
+      margin-top: 40px;
+    }
+
+    .why-read-nonfiction h3 {
+      color: #FF2E63;
+      margin-bottom: 10px;
+    }
+
+    .why-read-nonfiction ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #252A34;
+      color: #EAEAEA;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .footer-column h4 {
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #EAEAEA;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #FF2E63;
+    }
+
+    .footer-column p {
+      font-size: 0.95rem;
+    }
+
+    footer .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+    <section class="nonfiction-section">
+  <h2> Discover the Power of Non-Fiction</h2>
+  <p>
+    Non-fiction books inform, educate, and inspire by presenting real-world knowledge, facts, and true stories. 
+    Whether you're interested in science, self-development, biographies, or current events, non-fiction helps expand 
+    your understanding of the world around you.
+  </p>
+
+  <div class="book-list">
+    <div class="book">
+      <h3>1. <em>Educated</em> by Tara Westover</h3>
+      <img src="img/nonfiction1.jpg" alt="">
+      <p>A memoir of a woman who escapes her survivalist upbringing to pursue education, ultimately earning a PhD from Cambridge.</p>
+    </div>
+
+    <div class="book">
+      <h3>2. <em>Atomic Habits</em> by James Clear</h3>
+      <img src="img/nonfiction2.jpg" alt="">
+      <p>A practical guide to building good habits, breaking bad ones, and mastering the tiny behaviors that lead to remarkable results.</p>
+    </div>
+
+    <div class="book">
+      <h3>3. <em>Thinking, Fast and Slow</em> by Daniel Kahneman</h3>
+      <img src="img/nonfiction3.jpg" alt="">
+      <p>An exploration of how we think — the fast, intuitive way and the slow, logical way — and how these systems shape our decisions.</p>
+    </div>
+
+    <div class="book">
+      <h3>4. <em>Becoming</em> by Michelle Obama</h3>
+      <img src="img/nonfiction4.jpg" alt="">
+      <p>An intimate and powerful memoir from the former First Lady of the United States, sharing her personal story and life journey.</p>
+    </div>
+
+    <div class="book">
+      <h3>5. <em>The Power of Now</em> by Eckhart Tolle</h3>
+      <img src="img/nonfiction5.jpg" alt="">
+      <p>A spiritual classic that teaches the importance of living in the present moment to find peace and purpose.</p>
+    </div>
+  </div>
+
+  <div class="why-read-nonfiction">
+    <h3> Why Read Non-Fiction?</h3>
+    <ul>
+      <li>Gain <strong>real-world knowledge and skills</strong></li>
+      <li>Learn from <strong>true stories and experiences</strong></li>
+      <li>Develop better <strong>critical thinking and awareness</strong></li>
+      <li>Stay informed about <strong>history, science, and culture</strong></li>
+      <li>Get inspired by <strong>extraordinary lives and ideas</strong></li>
+    </ul>
+  </div>
+</section>
+
+    <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Guides</a></li>
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Event Updates</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join</h4>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Library. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

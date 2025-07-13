@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographical</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+</head>
+
+ <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #EAEAEA;
+      color: #252A34;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* geography Section */
+    .geography-section {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .geography-section h2 {
+      font-size: 2rem;
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .geography-section p {
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* Book List */
+    .book-list {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #fefefe;
+      border-right: 5px solid #FF2E63;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.02);
+    }
+
+    .book h3 {
+      color: #252A34;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .book img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .book p {
+      color: #555;
+    }
+
+    /* Why Read geography Section */
+    .why-read-geography {
+      margin-top: 40px;
+    }
+
+    .why-read-geography h3 {
+      color: #FF2E63;
+      margin-bottom: 10px;
+    }
+
+    .why-read-geography ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #252A34;
+      color: #EAEAEA;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .footer-column h4 {
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #EAEAEA;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #FF2E63;
+    }
+
+    .footer-column p {
+      font-size: 0.95rem;
+    }
+
+    footer .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+
+<body>
+    <section class="geography-section">
+  <h2> Discover Our Geography Collection</h2>
+  <p>
+    Geography helps us understand the physical world, diverse landscapes, human-environment interaction, and global issues.
+    Explore our carefully selected geographical books that take you across continents, climates, and cultures.
+  </p>
+
+  <div class="book-list">
+    <div class="book">
+      <h3>1. <em>Prisoners of Geography</em> by Tim Marshall</h3>
+      <img src="img/geo1.jpg" alt="Prisoners of Geography book cover">
+      <p>A compelling exploration of how geography shapes global politics and the fate of nations.</p>
+    </div>
+
+    <div class="book">
+      <h3>2. <em>Why Geography Matters</em> by Harm De Blij</h3>
+      <img src="img/geo2.png" alt="Why Geography Matters book cover">
+      <p>Explains why geographical awareness is crucial in a globalized world full of environmental and geopolitical challenges.</p>
+    </div>
+
+    <div class="book">
+      <h3>3. <em>Geography of Thought</em> by Richard E. Nisbett</h3>
+      <img src="img/geo3.png" alt="Geography of Thought book cover">
+      <p>This book explores how Eastern and Western cultures think differently based on their geographic and social contexts.</p>
+    </div>
+
+    <div class="book">
+      <h3>4. <em>National Geographic Atlas of the World</em></h3>
+      <img src="img/geo4.png" alt="National Geographic Atlas book cover">
+      <p>A stunning visual reference packed with detailed maps and geographical data from across the globe.</p>
+    </div>
+
+    <div class="book">
+      <h3>5. <em>How to Lie with Maps</em> by Mark Monmonier</h3>
+      <img src="img/geo5.png" alt="How to Lie with Maps book cover">
+      <p>A fascinating look into the power of maps — and how they can mislead or manipulate depending on how they’re drawn.</p>
+    </div>
+  </div>
+
+  <div class="why-read-geography">
+    <h3>Why Study Geography?</h3>
+    <ul>
+      <li>Understand the world’s physical features and ecosystems</li>
+      <li>Analyze global issues like climate change and migration</li>
+      <li>Enhance spatial awareness and critical thinking</li>
+      <li>Connect cultures, environments, and societies</li>
+    </ul>
+  </div>
+</section>
+
+ <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Guides</a></li>
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Event Updates</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join</h4>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Library. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

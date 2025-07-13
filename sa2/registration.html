@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Signup</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="registration.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form class="signup-form">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="divider">OR</div>
+
+        <!-- Google Sign-In placeholder -->
+        <div class="google-btn">Sign up with Google</div>
+
+        <!-- Optional: Google Sign-In actual button (if needed) -->
+        <!--
+    <div id="g_id_onload"
+         data-client_id="YOUR_CLIENT_ID"
+         data-login_uri="dashboard.html"
+         data-auto_prompt="false"></div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-theme="outline"
+         data-size="large"></div>
+    -->
+    </div>
+</body>
+<script>
+    document.querySelector('.signup-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = this.name.value;
+        const email = this.email.value;
+        const password = this.password.value;
+
+        if (!name || !email || !password) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Simulate signup success and redirect
+        alert(`Welcome, ${name}! Redirecting to your dashboard...`);
+        window.location.href = "dashboard.html";
+    });
+
+    document.querySelector('.google-btn').addEventListener('click', function () {
+        alert("Google Sign-Up Clicked — add integration later.");
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <style>
+       /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 30px;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4a6fa5;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:first-child {
+    background-color: transparent;
+    border: 1px solid #4a6fa5;
+    color: #4a6fa5;
+}
+
+.btn:last-child {
+    background-color: #4a6fa5;
+    border: 1px solid #4a6fa5;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 0 4rem;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+    margin-left: 40px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #7f8c8d;
+}
+
+.cta-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #3a5a80;
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 80%;
+    height: 400px;
+    margin: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Resources section */
+.resources-section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.resources-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.resource-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background-color: #4a6fa5;
+    color: white;
+    border-color: #4a6fa5;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active:hover {
+    background-color: #3a5a80;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Item cards */
+.item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 280px;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.item h4 {
+    color: #4a6fa5;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem 0;
+    text-transform: uppercase;
+}
+
+.item h2 {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.item p {
+    color: #7f8c8d;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.item button {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: 0.6rem;
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item button:hover {
+    background-color: #3a5a80;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #2c3e50;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links, .nav-buttons {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 6rem 0 2rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .resource-filters {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="images/logo1.png" alt="Library Logo">
+                    <span>Library</span>
+                </a>
+
+                <button class="mobile-menu-btn">☰</button>
+
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#enquiry">Enquiry</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="sa/index.html" class="btn">Login</a>
+                    <a href="sa2/registration.html" class="btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Expand Your Knowledge</h2>
+            <p>Discover all the resources and services our library offers to support your learning journey.</p>
+            <button class="cta-btn" id="exploreBtn">Explore Resources</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/lib.jpg" alt="Library bookshelf">
+        </div>
+    </section>
+
+    <section class="resources-section">
+        <h2>Our Resources</h2>
+        <div class="resource-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="digital">Digital</button>
+            <button class="filter-btn" data-filter="physical">Physical</button>
+            <button class="filter-btn" data-filter="services">Services</button>
+        </div>
+
+        <div class="resources-grid">
+            <!-- Resources will be added dynamically by JavaScript -->
+        </div>
+    </section>
+    <section class="container">
+
+        <div class="item">
+            <img src="images/pic1.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/pic2.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/pic3.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/pic4.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/pic5.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/spiderman.jpeg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/comics.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/fiction.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/mystery.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+        <div class="item">
+            <img src="images/staffs.jpg" alt="">
+            <h4>digital</h4>
+            <h2>e-book collection</h2>
+            <p>Access thousands of e-books from our digital collection.</p>
+            <button>learn More</button>
+        </div>
+      
+
+    </section>
+    <div class="copyright">
+        <p>&copy; 2023 Community Library. All rights reserved.</p>
+    </div>
+</body>
+
+</html>

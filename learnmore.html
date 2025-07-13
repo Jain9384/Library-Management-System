@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Library resources including books, journals, and research materials">
+    <title>learnmore</title>
+    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #08D9D6;
+            --secondary: #FF2E63;
+            --accent: #F4631E;
+            --text-dark: #252A34;
+            --text-light: #EAEAEA;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn {
+            background-color: var(--text-dark);
+            color: var(--white);
+        }
+
+        .primary-btn:hover {
+            background-color: #1a1f28;
+        }
+
+        .secondary-btn {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .secondary-btn:hover {
+            background-color: #e62958;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            background-color: var(--accent);
+            color: var(--text-dark);
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .hero-image img {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-height: 400px;
+           
+            object-fit: cover;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            padding: 30px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Cards Grid */
+        .card-grid {
+            display: grid;
+            /*grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+            padding: 2rem 5%;
+            margin-bottom: 60px;
+            grid-template-columns: repeat(3, 1fr);
+            /* Show exactly 3 per row */
+            gap: 2rem;
+            margin-bottom: 0px;
+            background-color:#273F4F;
+            display:grid;
+        }
+
+        .card {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .card-body p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*.btn.small {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }*/
+
+        .btn.primary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn.primary:hover {
+            background-color: #e62958;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .tag.digital {
+            background-color: var(--primary);
+        }
+
+        .tag.physical {
+            background-color: var(--secondary);
+        }
+
+        .tag.services {
+            background-color: var(--accent);
+        }
+
+        /* Membership Section */
+        .membership {
+            padding:  20px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .membership h2 {
+            color: var(--text-dark);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .membership h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .mbr {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .mbr ul {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .mbr img {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .membership ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .membership ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--white);
+            min-width: 600px;
+        }
+
+        .table-container th,
+        .table-container td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table-container thead {
+            background-color: var(--text-dark);
+            color: var(--white);
+        }
+
+        .table-container tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table-container .section-header {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        /* Choose Section */
+        .choose {
+            background-color: var(--text-light);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .choose h2 {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .choose h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .choose ul {
+            list-style: none;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .choose li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .choose li::before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .choose button {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .choose button:hover {
+            background-color: #06bcbc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .footer-column p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 30px;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content, .hero-image {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .membership h3 {
+                font-size: 1.3rem;
+            }
+
+            .choose {
+                padding: 30px 20px;
+            }
+
+            .choose h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo" aria-label="Library Home">
+                    <img src="img/logo1.png" alt="Library Logo">
+                    <span>Library</span>
+                </a>
+
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#enquiry">Enquiry</a></li>
+                </ul>
+
+                <div class="nav-buttons">
+                    <a href="sa/index.html" class="btn primary-btn">Login</a>
+                    <a href="sa2/registration.html" class="btn secondary-btn">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Our Vast Collection</h1>
+            <p style="color:  rgba(251, 245, 238, 0.903);">Access thousands of resources to support your learning and research needs. From rare books to digital journals, we have everything to fuel your curiosity.</p>
+            <div class="hero-buttons">
+                <a href="#resources" class="btn primary-btn">Explore Resources</a>
+                <a href="#membership" class="btn secondary-btn">Become a Member</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/learnmore.jpg" alt="Library bookshelf with various books" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="section-header" style="background-color: #EFEEEA;">
+            <h2>Our Resources</h2>
+            <p>Browse our extensive collection of materials and services tailored for all knowledge seekers</p>
+        </div>
+        
+        <main class="card-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="img/E-Book Collection.jpg" alt="Digital e-books on a tablet" class="card-img" loading="lazy">
+                <div class="tag digital">Digital</div>
+                <div class="card-body">
+                    <h3>E-Book Collection</h3>
+                    <p>Access thousands of e-books from our digital collection on any device, available 24/7 from anywhere.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img/Print Books.jpg" alt="Shelves of physical books" class="card-img" loading="lazy">
+                <div class="tag physical">Physical</div>
+                <div class="card-body">
+                    <h3>Print Books</h3>
+                    <p>Browse our extensive collection of physical books across all genres and subjects in our comfortable reading spaces.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img/Academic Journals.jpg" alt="Stack of academic journals" class="card-img" loading="lazy">
+                <div class="tag digital">Digital</div>
+                <div class="card-body">
+                    <h3>Academic Journals</h3>
+                    <p>Access scholarly articles and research papers from leading publications in various disciplines.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="img/Research Assistance.jpg" alt="Librarian helping a student" class="card-img" loading="lazy">
+                <div class="tag services">Services</div>
+                <div class="card-body">
+                    <h3>Research Assistance</h3>
+                    <p>Get personalized help from our expert librarians for your academic projects and research needs.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="img/Audiobooks.jpg" alt="Person listening to audiobook" class="card-img" loading="lazy">
+                <div class="tag digital">Digital</div>
+                <div class="card-body">
+                    <h3>Audiobooks</h3>
+                    <p>Listen to books on the go with our extensive audiobook collection across multiple genres.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="img/Study Rooms.jpg" alt="Modern study room" class="card-img" loading="lazy">
+                <div class="tag services">Services</div>
+                <div class="card-body">
+                    <h3>Study Rooms</h3>
+                    <p>Reserve quiet study spaces equipped with power outlets and whiteboards for individual or group work.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="img/Magazines.jpg" alt="Display of magazines" class="card-img" loading="lazy">
+                <div class="tag services">Services</div>
+                <div class="card-body">
+                    <h3>Magazines</h3>
+                    <p>Current and back issues of popular magazines and periodicals covering diverse topics.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="img/Workshops.jpg" alt="Library workshop in progress" class="card-img" loading="lazy">
+                <div class="tag services">Services</div>
+                <div class="card-body">
+                    <h3>Workshops</h3>
+                    <p>Attend free workshops on research skills, technology, writing, and career development.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="img/Online Courses.jpg" alt="Person taking online course" class="card-img" loading="lazy">
+                <div class="tag digital">Digital</div>
+                <div class="card-body">
+                    <h3>Online Courses</h3>
+                    <p>Access free online courses on various subjects through our partnership with educational platforms.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card">
+                <img src="img/Special Collections.jpg" alt="Rare books in glass case" class="card-img" loading="lazy">
+                <div class="tag physical">Physical</div>
+                <div class="card-body">
+                    <h3>Special Collections</h3>
+                    <p>Explore rare books, manuscripts, and special archival materials in our climate-controlled reading room.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="card">
+                <img src="img/Interlibrary Loan.jpg" alt="Books being shipped" class="card-img" loading="lazy">
+                <div class="tag services">Services</div>
+                <div class="card-body">
+                    <h3>Interlibrary Loan</h3>
+                    <p>Request materials from other libraries when we don't have what you need in our collection.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="card">
+                <img src="img/Children's Section.jpg" alt="Children reading books" class="card-img" loading="lazy">
+                <div class="tag physical">Physical</div>
+                <div class="card-body">
+                    <h3>Children's Section</h3>
+                    <p>Books, educational toys, and activities designed to foster a love of reading in young minds.</p>
+                    <div class="buttons">
+                        <button type="button" class="btn small primary">Details</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Membership Section -->
+     <h2 class="section-header" style="background-color: #EFEEEA;text-align: center;font-size: 30px; ">Become a Member</h2>
+    <section class="membership" id="membership">
+      
+        <h3>LIBRARY MEMBERSHIP FORM - GUIDELINES</h3>
+        <div class="mbr">
+            <ul>
+                <li>Post Graduate Students / Doctoral / Post-Doctoral scholars, Faculty members, Non–Teaching Staff, Writers, Freelancers, and Journalists etc. can become the members of the library.</li>
+                <li>Prospective student members are required to forward their applications through Head of the Department/Principal of the college. Others are required to produce their valid identity card.</li>
+                <li>Theses, Research Project Reports or Reference Books will not be issued to any member.</li>
+                <li>Membership cards are non-transferable and must be presented for all transactions.</li>
+                <li>Lost cards should be reported immediately to prevent unauthorized use.</li>
+            </ul>
+            <img src="img/membership.jpg" alt="Library membership card and books" loading="lazy">
+        </div>
+        
+        <div class="table-container">
+            <h3>ICSSR Membership Details</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Category of Membership</th>
+                        <th>Membership Period</th>
+                        <th>Existing Membership Fees</th>
+                        <th>Change in Membership Fees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>ICSSR Officials</td>
+                        <td>Till their Service</td>
+                        <td>No Fees</td>
+                        <td>No Change</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>ICSSR Beneficiaries <br><small>(Project/Fellowship Awardees)</small></td>
+                        <td>One Year</td>
+                        <td>Rs. 800</td>
+                        <td>No Fees</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Institutional Members</td>
+                        <td>One Year</td>
+                        <td>Rs. 10,000</td>
+                        <td>No Change</td>
+                    </tr>
+                    <tr class="section-header">
+                        <td colspan="5" style="background-color: #555;">Consulting Members</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Annual</td>
+                        <td>One Year</td>
+                        <td>Rs. 900</td>
+                        <td>Rs. 1,200</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Half Yearly</td>
+                        <td>Six Months</td>
+                        <td>Rs. 500</td>
+                        <td>Rs. 800</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Monthly</td>
+                        <td>One Month</td>
+                        <td>Rs. 100</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Guest</td>
+                        <td>1 or 2 days</td>
+                        <td>No Fees</td>
+                        <td>No Change but cannot repeat the visit later.</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Scholar/ Faculty affiliated to any of the ICSSR's Institutes</td>
+                        <td>One year</td>
+                        <td>No Fees</td>
+                        <td>Any time can be visited</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <section class="choose">
+            <h2>Join Our Membership Today</h2>
+            <h3>Membership Benefits</h3>
+            <ul>
+                <li>Access to physical and digital library resources</li>
+                <li>Use of study and reading rooms with premium facilities</li>
+                <li>Personalized reference and research assistance from experts</li>
+                <li>Participation in exclusive workshops, seminars, and training sessions</li>
+                <li>Borrowing privileges (for eligible categories) with extended loan periods</li>
+                <li>Discounts on library events and special programs</li>
+                <li>Access to interlibrary loan services</li>
+                <li>Regular updates on new acquisitions in your areas of interest</li>
+            </ul>
+            <a href="membership.html"><button type="button">Apply Now</button></a>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#resources">Services</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Research Guides</a></li>
+                        <li><a href="#">Website</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">E-Books</a></li>
+                        <li><a href="#">Databases</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Updated</h4>
+                    <ul>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Event Updates</a></li>
+                        <li><a href="#">New Releases</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p>123 Knowledge Avenue<br>Learning City, LC 12345<br>Email: info@library.com<br>Phone: (123) 456-7890</p>
+                    <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2024 Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (document.querySelector('.nav-links').classList.contains('active')) {
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Card button functionality (placeholder)
+        document.querySelectorAll('.card .btn.primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const cardTitle = this.closest('.card').querySelector('h3').textContent;
+                alert(`More details about ${cardTitle} would be shown here.`);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>space</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #EAEAEA;
+      color: #252A34;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* space Section */
+    .space-section {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .space-section h2 {
+      font-size: 2rem;
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .space-section p {
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* Book List */
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #fefefe;
+      border-right: 5px solid #FF2E63;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.02);
+    }
+
+    .book h3 {
+      color: #252A34;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .book img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .book p {
+      color: #555;
+    }
+
+    /* Why Read space Section */
+    .why-read-space {
+      margin-top: 40px;
+    }
+
+    .why-read-space h3 {
+      color: #FF2E63;
+      margin-bottom: 10px;
+    }
+
+    .why-read-space ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #252A34;
+      color: #EAEAEA;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .footer-column h4 {
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #EAEAEA;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #FF2E63;
+    }
+
+    .footer-column p {
+      font-size: 0.95rem;
+    }
+
+    footer .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="space-section">
+    <h2> Explore the Wonders of Space</h2>
+    <p>
+      From black holes to galaxies, and astronauts to alien worlds, space books open up the universe for curious minds.
+      Whether you're a stargazer or a science enthusiast, our space collection is filled with awe-inspiring reads that
+      take you beyond Earth!
+    </p>
+
+    <div class="book-list">
+      <div class="book">
+        <h3>1. <em>Astrophysics for People in a Hurry</em> by Neil deGrasse Tyson</h3>
+        <img src="img/Space1.jpg" alt="">
+        <p>A witty and compact guide to the cosmos, this book breaks down complex space concepts into bite-sized,
+          enjoyable insights.</p>
+      </div>
+
+      <div class="book">
+        <h3>2. <em>Cosmos</em> by Carl Sagan</h3>
+        <img src="img/Space2.jpg" alt="">
+        <p>A classic masterpiece that blends science, philosophy, and storytelling to explore the vastness of the
+          universe and our place within it.</p>
+      </div>
+
+      <div class="book">
+        <h3>3. <em>The Martian</em> by Andy Weir</h3>
+        <img src="img/Space3.jpg" alt="">
+        <p>A thrilling sci-fi novel about an astronaut stranded on Mars using science and wit to survive — packed with
+          humor and engineering ingenuity.</p>
+      </div>
+
+      <div class="book">
+        <h3>4. <em>Black Holes and Baby Universes</em> by Stephen Hawking</h3>
+        <img src="img/Space4.jpg" alt="">
+        <p>Dive into the mind of one of the greatest physicists as he explains the mysteries of black holes, time, and
+          the origins of the universe.</p>
+      </div>
+
+      <div class="book">
+        <h3>5. <em>Packing for Mars</em> by Mary Roach</h3>
+        <img src="img/Space5.jpg" alt="">
+        <p>A hilarious and fascinating look into the bizarre science of space travel — from zero gravity to astronaut
+          hygiene.</p>
+      </div>
+    </div>
+
+    <div class="why-read-space">
+      <h3> Why Read Space Books?</h3>
+      <ul>
+        <li>Expand your understanding of the <strong>universe and its mysteries</strong></li>
+        <li>Inspire <strong>curiosity, exploration, and imagination</strong></li>
+        <li>Learn about <strong>scientific breakthroughs and cosmic theories</strong></li>
+        <li>Appreciate the scale, beauty, and complexity of <strong>space and time</strong></li>
+        <li>Fuel your interest in <strong>astronomy, physics, and technology</strong></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Guides</a></li>
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Event Updates</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join</h4>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Library. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

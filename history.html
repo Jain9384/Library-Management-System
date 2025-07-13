@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History Books</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #EAEAEA;
+      color: #252A34;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* History Section */
+    .history-section {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .history-section h2 {
+      font-size: 2rem;
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .history-section p {
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    /* Book List */
+    .book-list {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #fefefe;
+      border-right: 5px solid #FF2E63;
+      padding: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .book:hover {
+      transform: scale(1.02);
+    }
+
+    .book h3 {
+      color: #252A34;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .book img {
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .book p {
+      color: #555;
+    }
+
+    /* Why Read History Section */
+    .why-read-history {
+      margin-top: 40px;
+    }
+
+    .why-read-history h3 {
+      color: #FF2E63;
+      margin-bottom: 10px;
+    }
+
+    .why-read-history ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #252A34;
+      color: #EAEAEA;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .footer-column h4 {
+      color: #08D9D6;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #EAEAEA;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #FF2E63;
+    }
+
+    .footer-column p {
+      font-size: 0.95rem;
+    }
+
+    footer .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="history-section">
+    <h2> Explore Our History Collection</h2>
+    <p>
+      History allows us to understand the world by reflecting on the events, people, and cultures that shaped it.
+      Dive into our curated selection of influential and engaging history books — from ancient civilizations to modern
+      times.
+    </p>
+
+    <div class="book-list">
+      <div class="book">
+        <h3>1. <em>Sapiens: A Brief History of Humankind</em> by Yuval Noah Harari</h3>
+        <img src="images/hist1.jpg" alt="">
+        <p>Explore how Homo sapiens became the dominant species on Earth through cognitive, agricultural, and scientific
+          revolutions.</p>
+      </div>
+
+      <div class="book">
+        <h3>2. <em>Guns, Germs, and Steel</em> by Jared Diamond</h3>
+        <img src="images/hist2.jpg" alt="">
+        <p>This book explains how geography, agriculture, and innovation shaped civilizations — not race or culture.</p>
+      </div>
+
+      <div class="book">
+        <h3>3. <em>A People's History of the United States</em> by Howard Zinn</h3>
+        <img src="images/hist3.jpg" alt="">
+        <p>A retelling of American history from the viewpoint of marginalized groups like workers, women, and
+          minorities.</p>
+      </div>
+
+      <div class="book">
+        <h3>4. <em>The Silk Roads: A New History of the World</em> by Peter Frankopan</h3>
+        <img src="images/hist4.jpg" alt="">
+        <p>A fascinating journey through the East's historical significance via trade, culture, and diplomacy.</p>
+      </div>
+
+      <div class="book">
+        <h3>5. <em>The Diary of a Young Girl</em> by Anne Frank</h3>
+        <img src="images/hist5.jpg" alt="">
+        <p>A deeply moving personal account of life in hiding during the Holocaust, offering a powerful perspective on
+          World War II.</p>
+      </div>
+    </div>
+
+    <div class="why-read-history">
+      <h3> Why Read History?</h3>
+      <ul>
+        <li>Understand patterns that repeat over time</li>
+        <li>Learn from past mistakes and successes</li>
+        <li>Appreciate cultural diversity and heritage</li>
+        <li>Foster critical thinking and global awareness</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Research Guides</a></li>
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Labels</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Stay Updated</h4>
+          <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Event Updates</a></li>
+            <li><a href="#">New Releases</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Join</h4>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>© 2024 Library. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
