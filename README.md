@@ -1,59 +1,62 @@
-# JsonApp
+# 📚 Library Management System - Angular + JSON Server
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+A responsive **Library Management System** built using **Angular** with a mock backend (**JSON Server**) that supports **user authentication** and complete **CRUD operations** for books. It features a clean UI with essential pages like **Book Collections**, **Learn More**, and **Membership Form**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🔧 Tech Stack
 
-```bash
-ng serve
-```
+| Tech         | Description                    |
+|--------------|--------------------------------|
+| Angular 19   | Frontend framework             |
+| JSON Server  | Mock REST API backend          |
+| Bootstrap    | Styling and layout             |
+| TypeScript   | Component logic                |
+| HTML/CSS     | UI structure and design        |
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📑 Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### 👤 User Access
+- 🔐 Login (basic validation)
+- 📝 Signup (stores user in `db.json`)
 
-```bash
-ng generate component component-name
-```
+### 📘 Book Management
+- ➕ Add new books  
+- 📄 View all books  
+- 🖊️ Edit existing records  
+- 🗑️ Delete books  
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 📖 Library Pages
+- 🗂️ **Book Collections** – Filter/search books  
+- 📄 **Learn More** – Info about the library  
+- 🧾 **Membership Form** – Submit membership request  
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🚀 How to Run the Project
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 1️⃣ Clone and Install
 
 ```bash
-ng e2e
-```
+git clone https://github.com/your-username/library-management-angular.git
+cd library-management-angular
+npm install
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Run the server:
 
-## Additional Resources
+db.json:
+json-server --watch db.json --port 3000
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Run Angular App
+
+ng serve -o
+npm start
+
+
+ JSON Server Endpoints
+Resource	Endpoint
+Books	http://localhost:3000/books
+Users	http://localhost:3000/users
+Memberships	http://localhost:3000/memberships
