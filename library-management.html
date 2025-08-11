@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background-color: #252A34;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .back-btn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #08D9D6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .back-btn:hover {
+            background-color: #06bcbc;
+        }
+        
+        .angular-container {
+            width: 100%;
+            height: calc(100vh - 80px);
+            border: none;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .instructions {
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .instructions h3 {
+            color: #1976d2;
+            margin-top: 0;
+        }
+        
+        .command {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">← Back to Main Site</a>
+        <h1>📚 Library Management System</h1>
+    </div>
+    
+    <div class="instructions">
+        <h3>🚀 Getting Started with Library Management System</h3>
+        <p>To use the full Library Management System with CRUD operations, please follow these steps:</p>
+        
+        <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+            <h4>Step 1: Start the JSON Server (Backend)</h4>
+            <div class="command">npx json-server --watch db.json --port 3000</div>
+            
+            <h4>Step 2: Start the Angular Development Server</h4>
+            <div class="command">ng serve --port 4200</div>
+            
+            <h4>Step 3: Access the Management System</h4>
+            <p>Once both servers are running, the Library Management System will be available at:</p>
+            <div class="command">http://localhost:4200</div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <h4>✨ Features Available:</h4>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li>📖 View all books in the library</li>
+                <li>➕ Add new books to the collection</li>
+                <li>✏️ Edit existing book information</li>
+                <li>🗑️ Delete books from the collection</li>
+                <li>🔍 Search functionality</li>
+            </ul>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <a href="http://localhost:4200" target="_blank" style="background-color: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; display: inline-block;">
+                🚀 Open Library Management System
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Check if Angular app is running
+        function checkAngularApp() {
+            fetch('http://localhost:4200')
+                .then(response => {
+                    if (response.ok) {
+                        // Angular app is running, redirect to it
+                        window.location.href = 'http://localhost:4200';
+                    }
+                })
+                .catch(error => {
+                    // Angular app is not running, show instructions
+                    console.log('Angular app not running, showing instructions');
+                });
+        }
+        
+        // Auto-check every 5 seconds if user wants to auto-redirect
+        // checkAngularApp();
+    </script>
+</body>
+</html>

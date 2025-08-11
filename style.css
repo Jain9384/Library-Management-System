@@ -582,3 +582,19 @@ footer {
     }
 }
 
+/* Library Management Link Styling */
+.management-link {
+    background-color: #08D9D6 !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+}
+
+.management-link:hover {
+    background-color: #06bcbc !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(8, 217, 214, 0.3) !important;
+}
+
