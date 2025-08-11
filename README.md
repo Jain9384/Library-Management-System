@@ -75,17 +75,5 @@ For major changes, please open an issue first to discuss what you would like to 
 
 ---
 
-## 📄 License
 
-MIT
 
----
-
-## 📞 Contact
-
-**Email:** info@library.com  
-**Phone:** (123) 456-7890
-
----
-
-> _“Discover endless resources to expand your mind and explore new worlds through reading and learning.”_
