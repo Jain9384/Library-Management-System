@@ -21,10 +21,11 @@ Discover knowledge, embrace imagination, and manage your library with ease.
 
 ## 🖼️ Screenshots
 
-| Home Page | Book Management | Team Section |
-|-----------|----------------|--------------|
-| ![Home](img/screenshot-home.png) | ![Books](img/screenshot-books.png) | ![Team](img/screenshot-team.png) |
-lib1.png  lib2.png
+![Home Page](lib1.png)
+![Product Catalog](lib2.png)
+![login Page](lib3.png)
+![gmail](lib4.png)
+![gmail verification](lib5.png)
 
 ---
 
@@ -75,6 +76,7 @@ Pull requests are welcome!
 For major changes, please open an issue first to discuss what you would like to change.
 
 ---
+
 
 
 
