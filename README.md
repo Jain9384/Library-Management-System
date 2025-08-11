@@ -5,7 +5,7 @@ Discover knowledge, embrace imagination, and manage your library with ease.
 
 ---
 
-![Library Banner](img/logo2.png)
+![Library Banner](logo2.png)
 
 ## 🚀 Features
 
@@ -76,6 +76,7 @@ Pull requests are welcome!
 For major changes, please open an issue first to discuss what you would like to change.
 
 ---
+
 
 
 
